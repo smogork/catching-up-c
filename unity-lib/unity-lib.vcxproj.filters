@@ -15,22 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="primitives.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="pointers.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <ClInclude Include="unity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="unity_internals.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="primitives.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="pointers.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <ClCompile Include="unity.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
