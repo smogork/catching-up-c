@@ -39,6 +39,22 @@ void test_rand_float(void) {
     }
 }
 
+
+void test_rand_byte(void) {
+    rand_byte(); // Nothing can be checked here. Function has to be defined.
+}
+
+void test_rand_character(void) {
+    char lower_bound = 0x20;
+    char upper_bound = 0x7E;
+    for (int i = 0; i < 1000; ++i)
+    {
+        char val = rand_character();
+        TEST_ASSERT_LESS_OR_EQUAL_CHAR_MESSAGE(upper_bound, val, "Expected readable character");
+        TEST_ASSERT_GREATER_OR_EQUAL_CHAR_MESSAGE(lower_bound, val, "Expected readable character");
+    }
+}
+
 void test_add_integers(){
     // TODO: write a simple test
     TEST_IGNORE();
@@ -72,6 +88,8 @@ int main(void) {
     UNITY_BEGIN();
     RUN_TEST(test_rand_int);
     RUN_TEST(test_rand_float);
+    RUN_TEST(test_rand_byte);
+    RUN_TEST(test_rand_character);
     RUN_TEST(test_add_integers);
     RUN_TEST(test_add_integers2);
     RUN_TEST(test_add_integers3);
