@@ -57,12 +57,3 @@ PCM16_stereo_t* allocate_PCM16_stereo_buffer(int32_t FrameCount);
 size_t  write_PCM16wav_data(FILE* file_p,
     int32_t         FrameCount,
     PCM16_stereo_t* buffer_p);
-
-/*Generate two saw-tooth signals at two frequencies and amplitudes*/
-int generate_dual_sawtooth(double frequency1,
-    double amplitude1,
-    double frequency2,
-    double amplitude2,
-    int32_t SampleRate,
-    int32_t FrameCount,
-    PCM16_stereo_t* buffer_p);
