@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "unity.h"
 #include "primitives.h"
+#include "pointers.h"
 
 void setUp(void) {
     srand(10);
@@ -38,9 +39,43 @@ void test_rand_float(void) {
     }
 }
 
+void test_add_integers(){
+    // TODO: write a simple test
+    TEST_IGNORE();
+}
+
+void test_add_integers2(){
+    // TODO: write a simple test
+    TEST_IGNORE();
+}
+
+void test_add_integers3(){
+    // TODO: write a simple test
+    TEST_IGNORE();
+}
+
+void test_add_integers4(){
+    // TODO: write a simple test
+    TEST_IGNORE();
+}
+
+void test_add_unsigned_overflow(){
+    const unsigned int lhs = UINT32_MAX;
+    const unsigned int rhs = 2;
+
+    unsigned int res = add_unsigned(lhs, rhs);
+
+    TEST_ASSERT_EQUAL_MESSAGE(1u, res, "Expected well defined overflow");
+}
+
 int main(void) {
     UNITY_BEGIN();
     RUN_TEST(test_rand_int);
     RUN_TEST(test_rand_float);
+    RUN_TEST(test_add_integers);
+    RUN_TEST(test_add_integers2);
+    RUN_TEST(test_add_integers3);
+    RUN_TEST(test_add_integers4);
+    RUN_TEST(test_add_unsigned_overflow);
     return UNITY_END();
 }
