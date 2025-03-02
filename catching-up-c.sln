@@ -9,7 +9,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "unity-lib", "unity-lib\unit
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "arrays-task2", "arrays-task2\arrays-task2.vcxproj", "{3C4A3330-0761-424B-B35B-F5BF18B1A028}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fixed-heap-task3", "fixed-heap-task3\fixed-heap-task3.vcxproj", "{230A3D3C-E214-4B57-A307-DF2CA8B6DFBD}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "unrolled-list-task3", "unrolled-list-task3\unrolled-list-task3.vcxproj", "{230A3D3C-E214-4B57-A307-DF2CA8B6DFBD}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "complex-task4", "complex-task4\complex-task4.vcxproj", "{DA438BAF-F6DF-44CB-8888-B9B40AD853C0}"
 EndProject
