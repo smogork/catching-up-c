@@ -240,8 +240,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c" />
-    <ClCompile Include="pointers.c" />
-    <ClCompile Include="primitives.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pointers.h" />
