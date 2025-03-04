@@ -82,69 +82,28 @@ error0:
     return;
 }
 
-void test_cos_creation() {
-    // Taking ownership over this 
-    int16_t* sinwave = generate_sin(A4_LENGTH, 10000, SAMPLE_RATE);
-    change_phase(sinwave, SAMPLE_RATE, A4_LENGTH / 2);
-
-    write_wave_file("test_cos_creation.wav", sinwave, SAMPLE_RATE);
-
-    free(sinwave);
-}
 
 void test_sin_creation() {
-    // Taking ownership over this 
-    int16_t* sinwave = generate_sin(A4_LENGTH, 10000, SAMPLE_RATE);
 
-    write_wave_file("test_sin_creation.wav", sinwave, SAMPLE_RATE);
-
-    free(sinwave);
 }
 
 void test_silence_creation(void) {
-    // Taking ownership over this 
-    int16_t* silence = generate_silence(SAMPLE_RATE);
 
-    write_wave_file("test_silence_creation.wav", silence, SAMPLE_RATE);
-
-    free(silence);
 }
 
+void test_cos_creation() {
+
+}
 
 
 void test_phase_shift_silence(void) {
-    // Taking ownership over this 
-    int16_t* output = generate_silence(SAMPLE_RATE);
-    int16_t* sin1 = generate_sin(A4_LENGTH, 10000, SAMPLE_RATE);
-    int16_t* sin2 = generate_sin(A4_LENGTH, 10000, SAMPLE_RATE);
 
-    change_phase(sin2, SAMPLE_RATE, A4_LENGTH / 2);
-    combine_waveforms(sin1, sin2, output, SAMPLE_RATE);
-
-    write_wave_file("test_phase_shift_silence.wav", output, SAMPLE_RATE);
-
-    free(output);
-    free(sin1);
-    free(sin2);
 }
 
 void test_c_chord(void) {
-    // Taking ownership over this 
-    int16_t* output = generate_silence(SAMPLE_RATE);
-    int16_t* sin1 = generate_sin(C4_LENGTH, 10000, SAMPLE_RATE);
-    int16_t* sin2 = generate_sin(E4_LENGTH, 10000, SAMPLE_RATE);
-    int16_t* sin3 = generate_sin(G4_LENGTH, 10000, SAMPLE_RATE);
+    // C chord is C4, E4 and G4 waves combined together.
 
-    combine_waveforms(output, sin1, output, SAMPLE_RATE);
-    combine_waveforms(output, sin2, output, SAMPLE_RATE);
-    combine_waveforms(output, sin3, output, SAMPLE_RATE);
-
-    write_wave_file("test_c_chord.wav", output, SAMPLE_RATE);
-
-    free(output);
-    free(sin1);
-    free(sin2);
-    free(sin3);
+    
 }
 
 // not needed when using generate_test_runner.rb
