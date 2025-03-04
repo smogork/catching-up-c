@@ -1,5 +1,4 @@
-﻿# Tablice i dynamiczna alokacja pamięci
-*Zadanie nr 2*
+﻿# Struktury
+*Zadanie nr 3*
 
-
-,
+TODO: napisz polecenie

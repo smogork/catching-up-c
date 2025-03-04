@@ -1,5 +1,4 @@
-﻿# Tablice i dynamiczna alokacja pamięci
-*Zadanie nr 2*
+﻿# Liczby zespolone - once again
+*Zadanie nr 4*
 
-
-,
+TODO: Napisac polecenie

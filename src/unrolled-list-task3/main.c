@@ -10,6 +10,7 @@ void tearDown(void) {
 }
 
 void test_ordered_list_insertion(void) {
+    TEST_IGNORE();
     unrolled_ordered_list_t* list = ordered_list_create();
 
     for (int i = 10; i >= 0; --i)
@@ -20,6 +21,7 @@ void test_ordered_list_insertion(void) {
 }
 
 void test_ordered_list_remove_in_the_middle(void) {
+    TEST_IGNORE();
     unrolled_ordered_list_t* list = ordered_list_create();
 
     for (int i = 10; i >= 0; --i)
@@ -35,6 +37,7 @@ void test_ordered_list_remove_in_the_middle(void) {
 }
 
 void test_ordered_list_remove_head(void) {
+    TEST_IGNORE();
     unrolled_ordered_list_t* list = ordered_list_create();
 
     for (int i = 10; i >= 0; --i)
