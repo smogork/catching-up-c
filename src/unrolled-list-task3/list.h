@@ -1,16 +1,13 @@
 #pragma once
-#include <stdint.h>
 
 #define NODE_CAPACITY 4
 
 typedef struct unrolled_list_node {
-	int values[NODE_CAPACITY];
-	int size;
-	struct unrolled_list_node* next;
+	/* Define me*/
 } unrolled_list_node_t;
 
 typedef struct unrolled_ordered_list {
-	unrolled_list_node_t* root;
+	/* Define me */
 } unrolled_ordered_list_t;
 
 unrolled_ordered_list_t* ordered_list_create();

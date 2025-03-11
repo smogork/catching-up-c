@@ -21,6 +21,7 @@ void ordered_list_destroy(unrolled_ordered_list_t* list)
 		free(cur);
 		cur = next;
 	}
+	free(list);
 }
 
 int ordered_list_insert_value(unrolled_ordered_list_t* list, int value)
