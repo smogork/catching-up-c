@@ -135,7 +135,7 @@ int ordered_list_remove_value(unrolled_ordered_list_t* list, int value)
 	}
 }
 
-int ordered_list_print(unrolled_ordered_list_t* list)
+void ordered_list_print(unrolled_ordered_list_t* list)
 {
 	unrolled_list_node_t* node = list->root;
 
