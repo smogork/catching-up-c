@@ -24,15 +24,9 @@ int16_t* generate_sin(int period_length, int16_t amplitude, int size)
 	if (!res)
 		return NULL;
 	
-	int period_idx = 0;
-	while (period_idx < size)
-	{
-		int last_idx = min(size, period_idx + period_length) - period_idx;
-		for (int i = 0; i < last_idx; ++i) {
-			double arg = ((double)i / period_length) * 2.0 * M_PI;
-			res[period_idx + i] = (int16_t)round(amplitude * sin(arg));
-		}
-		period_idx += period_length;
+	for (int i = 0; i < size; ++i) {
+		double x = ((double)i / period_length) * 2.0 * M_PI;
+		res[i] = (int16_t)(amplitude * sin(x));
 	}
 
 	return res;
@@ -50,7 +44,7 @@ void change_phase(int16_t* waveform, int size, int shift)
 
 	if (shift > 0)
 	{
-		// Copy the end of waveform to temporary buffer
+		// Copy t he end of waveform to temporary buffer
 		memcpy(buffer, waveform + size - shift, buffer_size);
 		// Copy the rest of the waveform to the end
 		memmove(waveform + shift, waveform, (size - shift) * sizeof(int16_t));

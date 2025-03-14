@@ -85,7 +85,7 @@ error0:
 void test_cos_creation() {
     // Taking ownership over this 
     int16_t* sinwave = generate_sin(A4_LENGTH, 10000, SAMPLE_RATE);
-    change_phase(sinwave, SAMPLE_RATE, A4_LENGTH / 2);
+    change_phase(sinwave, SAMPLE_RATE, A4_LENGTH / 4);
 
     write_wave_file("test_cos_creation.wav", sinwave, SAMPLE_RATE);
 
@@ -96,7 +96,7 @@ void test_sin_creation() {
     // Taking ownership over this 
     int16_t* sinwave = generate_sin(A4_LENGTH, 10000, SAMPLE_RATE);
 
-    write_wave_file("test_sin_creation.wav", sinwave, SAMPLE_RATE);
+    write_wave_file("test_sin_creation.wav", sinwave, SAMPLE_RATE); 
 
     free(sinwave);
 }
